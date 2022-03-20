@@ -15,7 +15,18 @@ else
         find $2 -type f -size "$3"M -exec ls -lh {} \;
       fi
       ;;
+
+  delete-old-file)
+    if [ -z $2 ]
+      then
+        echo "please give the path"
+      else
+        find $2  -mtime +"$3" -exec rm {} \;
+      fi
+      ;;
+
   *)
     echo "invalid command"
+    cat ./README.md
   esac
 fi 
