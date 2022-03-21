@@ -11,3 +11,7 @@ magic.sh script can perform the following tasks:
 3. To delete files older than 5 days at location /opt
    
    $ ./magic.sh delete-old-file /opt 5
+
+4. To check a port is occupied or not e.g: 8080
+   
+   $ ./magic.sh port-check 8080
